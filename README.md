@@ -33,4 +33,5 @@ Lighter than Squeezelite, requires ESP32-S2 with 2MB PSRAM at a minimum; S3 (dua
 ESP32S2 uses a single core to handle decoding, Wi-Fi, and I2S operations. While MP3 playback should be fine, FLAC files especially those with high bitrates or high compression—may experience audio dropouts. If this occurs, set `ENABLE_FLAC` to `0` and configure the LMS to transcode the audio to MP3.
 Keep `MAX_SAMPLE_RATE` set to 48000. 96kHz is likely too demanding for the ESP32S2.  
 ESP32S2 has less internal RAM (320KB) than the S3, so a 16KB stack for the loop task may place a significant burden on the system. If you encounter an "out of memory" error shortly after startup, try reducing the `SET_LOOP_TASK_STACK_SIZE` value to approximately 12KB.  
-Because these processes run on the same core as the Wi-Fi stack, there may be longer delays in start times compared to the S3.
+Because these processes run on the same core as the Wi-Fi stack, there may be longer delays in start times compared to the S3.  
+For monoal I2S amp, set `MONO_OUTPUT` to `0`  
