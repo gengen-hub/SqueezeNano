@@ -42,7 +42,7 @@
 #define STREAM_BUF_SIZE  (768 * 1024)  // network ring buffer, allocated in PSRAM
 #define PCM_FIFO_FRAMES  65536         // decoded PCM FIFO, MUST be a power of two
                                        // (mono: 128 KB, stereo: 256 KB, in PSRAM)
-#define MONO_OUTPUT      1             // 1 = downmix L+R to mono (same signal on both I2S slots)
+#define MONO_OUTPUT      0             // 1 = downmix L+R to mono (same signal on both I2S slots)
                                        // This also halves the PCM FIFO memory.
 
 #define ENABLE_FLAC      1             // flac decoding needs more RAM (uses PSRAM)
