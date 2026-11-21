@@ -1,6 +1,7 @@
   # Squeeze Nano
   
-  ### minimal SlimProto (Logitech Media Server) player for ESP32 boards with I2S DAC, multi room audio supported
+  ### minimal LMS SlimProto (Logitech / Lyrion Media Server) wifi player for ESP32 boards with I2S DAC, multi room sync supported
+  Lighter version of Squeezelite
   ESP32 boards : Requires ESP32-S2 with 2MB PSRAM at a minimum; S3 (dual core) is preferable
   
   Arduino IDE settings:
@@ -29,5 +30,5 @@
     - no gapless / crossfade
     - HTTP chunked transfer and ICY metadata are not supported
     - sample rate is limited by advertising MaxSampleRate to the server,
-      so LMS resamples before sending (S2:48000 S3:96000)
+      so LMS resamples before sending (S2:48kHz S3:96kHz)
  
